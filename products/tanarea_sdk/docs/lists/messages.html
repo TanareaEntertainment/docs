@@ -1,0 +1,301 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+
+		<style>
+			body
+			{
+				color: #838383;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				margin-bottom: 50px;
+				float: left;
+			}
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			.list_entry
+			{
+				margin-left: 40px;
+				margin-top: 35px;
+				width: 100%;
+				float: left;
+			}
+			.entry_type
+			{
+				width: 200px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="
+				padding-top: 30px;
+				padding-bottom: 40px;
+				background-color: #e9e9e9;
+			">
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 40px;
+				font-weight: 900;
+				color: #585858;
+			">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Lista wiadomości<br />
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Tutaj znajdziesz informacje dotyczące wiadomości wysyłanych przez różne moduły SDK - kody, opisy.
+			</div>
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; margin-bottom: 20px;">
+				Wiadomości
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000000</div>
+				<div>Nieznany kod wiadomości. Jeśli widzisz tę wiadomość, zgłoś to deweloperom Tanarea SDK gdyż należy to traktować jako błąd w kodzie SDK.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000001</div>
+				<div>
+					Otwieranie pliku wymaga zdefiniowanego przynajmniej jednego trybu. Rzuca wyjątkiem <span class="strong_word">tnrInvalidOpenMode</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000002</div>
+				<div>
+					Plik nie istnieje i flaga <span class="strong_word">CREATE_IF_NO_EXIST</span> nie została zastosowana. Rzuca wyjątkiem <span class="strong_word">tnrFileNotExist</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000003</div>
+				<div>Dalsze odczytywanie pliku może spowodować niezdefiniowane zachowanie.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000004</div>
+				<div>
+					Próba odczytu pliku, który nie został otwarty w trybie do odczytu. Rzuca wyjątkiem <span class="strong_word">tnrUnreadableFile</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000005</div>
+				<div>
+					Próba zapisu do pliku, który nie został otwarty w trybie do zapisu. Rzuca wyjątkiem <span class="strong_word">tnrUnwritableFile</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000006</div>
+				<div>Okno nie może zostać utworzone z rozmiarem 0x0. Minimalny rozmiar okna to 1x1.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000007</div>
+				<div>By przełączyć okno w tryb pełnego ekranu wymagane jest uprzednie przypisanie okna do ekranu (można to zrobić metodą <span class="strong_word">SetDisplay</span>).</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000008</div>
+				<div>Nie można wyśrodkować okna na tym wyświetlaczu, ponieważ jego tryby wideo są nieznane.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000009</div>
+				<div>Nie można wyśrodkować okna na tym wyświetlaczu, ponieważ jego tryby wideo są nieznane.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000A</div>
+				<div>
+					Nie można wykonać operacji zapis/odczyt na pamięci, która nie została przez widok pozyskana.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryViewUnallowedIO</span>.</span>
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000B</div>
+				<div>
+					Ścieżka do plik wykonywalnego nie została określona. Nie można utworzyć procesu bez pliku wykonywalnego.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrInvalidExecutablePath</span>.</span>
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000C</div>
+				<div>
+					Tworzenie nowego procesu się nie powiodło. Rzuca wyjątkiem <span class="strong_word">tnrProcessCreationFailed</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000D</div>
+				<div>Tworzenie nowego procesu się nie powiodło.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000E</div>
+				<div>
+					Uzyskanie kodu wyjścia procesu się nie powiodło. Rzuca wyjątkiem <span class="strong_word">tnrRetrieveExitCodeFailed</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000000F</div>
+				<div style="float: left;">Zdefiniowano kilka argumentów. Implementacja dla systemów Windows obsługuje tylko jeden argument,</div><br />
+				<span style="margin-left: 200px;">z tego powodu pozostałe argumenty zostaną pominięte.</span>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000010</div>
+				<div>
+					Nazwa gniazda nie może mieć długości 0 znaków. Rzuca wyjątkiem <span class="strong_word">tnrInvalidInterprocessSocketAddressName</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000011</div>
+				<div>
+					Nie można czekać na zewnętrzne prośby o połączenie jako nie-właściciel gniazda domeny.<br/>
+					<span style="margin-left: 200px;">Obiekt <span class="strong_word">tnrInterprocessSocket</span> musi być utworzony z flagą <span class="strong_word">SOCKET_OWNER.</span></span>
+					Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketUnowned</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000012</div>
+				<div>
+					Nie można przyjmować zewnętrznych próśb o połączenie z gniazdem domeny jako nie-właściciel gniazda domeny.<br />
+					<span style="margin-left: 200px;">Obiekt <span class="strong_word">tnrInterprocessSocket</span> musi być utworzony z flagą <span class="strong_word">SOCKET_OWNER.</span></span>
+					
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000013</div>
+				<div>
+					Wymagany zestaw funkcji Winsock jest niedostępny. Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketWinsockUnsupported</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000014</div>
+				<div>
+					Nie można uzyskać właścicielstwa nad gniazdem domeny, ponieważ to gniazdo domeny już ma właściciela.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketUnownable</span>.</span>
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000015</div>
+				<div>
+					Prośba o połączenie z gniazdem domeny się nie powiodła. Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketRequestFailed</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000016</div>
+				<div>
+					Nie można czekać na utworzenie gniazda jako właściciel ów gniazda. Rzuca wyjątkiem <span class="strong_word">tnrCantWaitAsSocketOwner</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000017</div>
+				<div>
+					Oczekiwane gniazdo nie powstało. Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketNoExist</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000018</div>
+				<div>
+					Żądany rozmiar dla pamięci współdzielonej powinien być większy niż 0. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemorySizeMustBeNotZero</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000019</div>
+				<div>Alokacja pamięci współdzielonej nie powiodła się. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryAllocationFailed</span>.
+
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001A</div>
+				<div>Nie udało się dołączyć procesu do pamięci współdzielonej. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryJoinFailed</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001B</div>
+				<div>Maska dostępu niezdefiniowana. Musi być przynajmniej <span class="strong_word">WRITE</span>/<span class="strong_word">READ</span>. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryHandleNoAccess</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001C</div>
+				<div>Nie uwolniono eksluzywnego dostępu do pamięci współdzielonej.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001D</div>
+				<div>Zapis do pamięci współdzielonej bez uprawnień do zapisu jest niedozwolony. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryViewBadAccess</span>.
+
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001E</div>
+				<div>Odczyt do pamięci współdzielonej bez uprawnień do odczytu jest niedozwolony. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryViewBadAccess</span>.
+
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x0000001F</div>
+				<div>Widok wykracza poza maksymalny zasięg bufora. Rzuca wyjątkiem <span class="strong_word">tnrSharedMemoryViewOutOfRange</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000020</div>
+				<div>Podane dane wykraczają poza zasięg widoku. Dane poza zasięgiem zostaną zignorowane.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000021</div>
+				<div>
+					Pozyskiwanie już pozyskanego przez ten sam widok eksluzywnego dostępu do pamięci współdzielonej.<br />
+					<span style="margin-left: 200px;">Potencjalne zakleszczenie, ponieważ pamięć współdzielona nie może być pozyskana dopóki nie zostanie zwolniona, nawet jeśli pozyskuje ją ten sam widok.</span>
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000022</div>
+				<div>Nieprawidłowy uchwyt do pamięci współdzielonej. Musi to być uchwyt, który już dołączył proces do pamięci współdzielonej, podano natomiast <span class="strong_word">nullptr</span>.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrInvalidSharedMemoryHandle</span>.</span>
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000023</div>
+				<div>
+					Zasięg widoku pamięci współdzielonej musi być określony. Podano <span class="strong_word">std::nullopt</span> Rzuca wyjątkiem <span class="strong_word">tnrUnspecifiedSize</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000024</div>
+				<div>Próba pozyskania już pozyskanego eksluzywnego dostępu do pamięci współdzielonej przez inny widok.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000025</div>
+				<div>Pamięć współdzielona nie może być zwolniona przez nie-pozyskiwacza.</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000026</div>
+				<div>
+					Próba odczytu/zapisu z/do międzyprocesowego gniazda jako jego właściciel. Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketUnvallowedIO</span>.</span>
+				</div>
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

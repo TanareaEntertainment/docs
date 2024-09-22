@@ -1,0 +1,314 @@
+<html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../styles/font.css">
+
+		<style>
+			.header
+			{
+				font-family: Lato;
+				text-align: left;
+				font-size: 35px;
+				margin-top: 80px;
+				margin-left: 70px;
+				font-weight: 900;
+				margin-bottom: 8px;
+				color: #e5e5e5;
+			}
+			body
+			{
+				color: #838383;
+				background-color: #0034b6;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				margin-bottom: 50px;
+			}
+			.entry
+			{
+				font-weight: 900;
+				font-size: 30px;
+				margin-top: 20px;
+			}
+			.entry_description
+			{
+				margin-left: 40px;
+				margin-top: 3px;
+			}
+			.entry_underline
+			{
+				background-color: inherit;
+				height: 5px;
+				width: 70%;
+				margin-left: -20px;
+				margin-top: 10px;
+			}
+
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			
+			a
+			{
+				text-decoration: inherit;
+				color: inherit;
+				
+			}
+			a:hover
+			{
+				color: #f20081;
+				color: #12ff00;
+				color: rgb(147, 147, 147);
+				/*background-color: white;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div style="
+				padding-top: 30px;
+				padding-bottom: 40px;
+				background-color: #e9e9e9;
+			">
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 40px;
+				font-weight: 900;
+				color: #585858;
+			">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Spis treści<br />
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 25%; color: white; font-size: 18px; margin-top: 50px;">
+			<div class="entry">Przegląd</div>
+			<a href="overview/installation.html" target="_blank">
+				<div class="entry_description">Instalacja</div>
+			</a>
+			<a href="overview/usage.html" target="_blank">
+				<div class="entry_description">Korzystanie</div>
+			</a>
+			<a href="overview/additional_info.html" target="_blank">
+				<div class="entry_description">Dodatkowe informacje</div>
+			</a>
+			
+			<div class="entry">Podstawowe makra</div>
+			<a href="macros/tnr_sdk_assert.html" target="_blank">
+				<div class="entry_description">TNR_SDK_ASSERT</div>
+			</a>
+			<a href="macros/tnr_sdk_bitmask.html" target="_blank">
+				<div class="entry_description">TNR_SDK_BITMASK</div>
+			</a>
+			<a href="macros/tnr_sdk_dont_export.html" target="_blank">
+				<div class="entry_description">TNR_SDK_DONT_EXPORT</div>
+			</a>
+			<a href="macros/tnr_sdk_if_platform.html" target="_blank">
+				<div class="entry_description">TNR_SDK_IF_PLATFORM</div>
+			</a>
+			<a href="macros/tnr_sdk_new_exception.html" target="_blank">
+				<div class="entry_description">TNR_SDK_NEW_EXCEPTION</div>
+			</a>
+			<a href="macros/tnr_sdk_nodiscard.html" target="_blank">
+				<div class="entry_description">TNR_SDK_NODISCARD</div>
+			</a>
+			<a href="macros/tnr_sdk_platform.html" target="_blank">
+				<div class="entry_description">TNR_SDK_PLATFORM</div>
+			</a>
+
+			
+			<div class="entry">Podstawowe typy</div>
+			<a href="lists/basic_types.html" target="_blank">
+				<div class="entry_description">Lista typów podstawowych dostarczanych przez SDK.</div>
+			</a>
+			
+
+			<div class="entry">Spis wiadomości</div>
+			<a href="lists/messages.html" target="_blank">
+				<div class="entry_description">Znajdziesz tutaj listę wiadomości generowanych przez SDK.</div>
+			</a>
+
+			<div class="entry">Meta inf</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrSDKVersion</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrVersion</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Zmienne i stałe</div>
+			</a>
+
+
+			<div class="entry">Message generator</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrMessageLevel</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrUnitTestResult</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrMessageInfo</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrMessageInfoFunction</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrMessageInfoObject</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrMessageEmitter</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrUnitTestMessageEmitter</div>
+			</a>
+
+			<div class="entry">File</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrFileOpenMode</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrFileInfo</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrFileBinary</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrFileText</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrFileInfoSet</div>
+			</a>
+
+			<div class="entry">Math</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - UnitMatrix</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - Degree</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - mat2</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - mat3</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - mat4</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - radian</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - vec2</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - vec3</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - vec4</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Funkcja - clip</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Funkcja - pow</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Funkcja - sqr</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Zmienne i stałe</div>
+			</a>
+
+			<div class="entry">String</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrString</div>
+			</a>
+
+			<div class="entry">InterprocessCom</div>
+			<a href="">
+				<div class="entry_description">Ogólne</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrInterprocessConnectionCreateFlag</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrSharedMemoryAccessMask</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Enumeracja - tnrSharedMemoryViewSize</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrInterprocessConnectionInfo</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrInterprocessMessageSize</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrNewProcessInfo</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrSharedMemoryInfo</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrSharedMemoryInvitation</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Struktura - tnrSharedMemoryViewInfo</div>
+			</a>
+
+			<a href="">
+				<div class="entry_description">Klasa - tnrInterprocessMessage</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrInterprocessSocket</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrProcess</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrSharedMemory</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrSharedMemoryAllocator</div>
+			</a>
+			<a href="">
+				<div class="entry_description">Klasa - tnrSharedMemoryView</div>
+			</a>
+		</div>
+	</body>
+</html>
