@@ -1,0 +1,15 @@
+@font-face
+{
+    font-family: "Lato";
+    src: url("../assets/Lato-Regular.ttf") format('truetype');
+}
+
+body
+{
+	overflow-y: hidden;
+	outline: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100vw;
+	font-family: Lato;
+}
