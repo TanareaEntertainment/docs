@@ -15,6 +15,23 @@
 				width: 96%;
 				height: 5px;
 			}
+			.class_member
+			{
+				font-weight: 100;
+				margin-top: 30px;
+				font-size: 20px;
+				color: inherit;
+			}
+			a
+			{
+				text-decoration: inherit;
+				color: inherit;
+			}
+			a:hover
+			{
+				color: #939393;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -23,7 +40,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Klasa tnrVersionTanareaSDK<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -34,22 +51,18 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
+				Interfejs do wersjonowania Tanarea SDK. Dziedziczy z <span class="strong_word">tnrVersion</span>&lt;<span class="strong_word">tnrSDKVersion</span>, <span class="strong_word">tnrSDKVersion::INSTALLED_VERSION</span>&gt;.
 			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; float: left;">
+				<div style="margin-bottom: 60px;">Składowe klasy</div>
+				<a href="class_tnrversiontanareasdk/getsdkversionstring.html" target="_blank">
+					<div class="class_member">
+						tnrVersionTanareaSDK::GetSDKVersionString()
+					</div>
+				</a>
 			</div>
-			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
-			</div>
-			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
-			</div>
+			
+			
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
 				<div style="margin-top: 10px; margin-left: 20px;">

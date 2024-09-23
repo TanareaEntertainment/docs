@@ -1,11 +1,12 @@
 <html></html>
 	<head lang="pl">
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../../../../styles/font.css">
-		<link rel="stylesheet" href="../../../../styles/docs.css">
-		<link rel="stylesheet" href="../../../../styles/page_header.css">
+		<link rel="stylesheet" href="../../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../../styles/page_header.css">
 
 		<style>
+			
 			.header_underline
 			{
 				background-color: #ffffff;
@@ -22,7 +23,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_BITMASK<br />
+				Składowa tnrMessageEmitter::SetMessageLimit()<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -33,20 +34,18 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Makro pomocnicze przy definiowaniu mask bitowych. Służy zwiększeniu czytelności i unifikacji kodu.
+				Ustawia limit ilości wygenerowanych wiadomości dla konkretnego poziomu wiadomości.
 			</div>
 			<div class="spec_header">
-				TNR_SDK_BITMASK(Bit)
+				tnrMessageEmitter::SetMessageLimit(MsgLevel, Limit)
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Bit</div>
-				<div class="value_desc">Numer bitu, dla którego ma zostać utworzona maska bitowa.</div>
+				<div class="value_name">MsgLevel</div>
+				<div class="value_desc">Poziom wiadomości, dla których limit ma zostać zaaplikowany.</div>
 			</div>
-			<div style="width: 100%; float: right; margin-top: 130px;">
-				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
-				<div style="margin-top: 10px; margin-left: 20px;">
-					- v1.0.0: Dodano.
-				</div>
+			<div class="value_entry">
+				<div class="value_name">Limit</div>
+				<div class="value_desc">Ten parametr ustala ile ma wynosić limit. Dla wyłączonego limitu wartość tego argumentu wynosi 0.</div>
 			</div>
 		</div>		
 	</body>

@@ -23,7 +23,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Struktura tnrMessageInfoFunction<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -34,21 +34,14 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
+				Dziedziczy pola z struktury <span class="strong_word">tnrMessageInfo</span>. Przechowuje rozszerzone informacje dotyczące wiadomości. Przeznaczona jest do wiadomości dotyczących konkretnych funkcji.
 			</div>
 			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+				Zdefiniowane składowe:
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
-			</div>
-			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
+				<div class="value_name">FunctionName</div>
+				<div class="value_desc">Nazwa funkcji, której dotyczy wiadomość.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>

@@ -3,15 +3,10 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../../../../styles/font.css">
 		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
 
 		<style>
-			body
-			{
-				color: #838383;
-				overflow-y: scroll;
-				overflow-x: hidden;
-				margin-bottom: 50px;
-			}
+			
 			.header_underline
 			{
 				background-color: #ffffff;
@@ -23,28 +18,11 @@
 		</style>
 	</head>
 	<body>
-		<div style="
-				padding-top: 30px;
-				padding-bottom: 40px;
-				background-color: #e9e9e9;
-			">
-			<div style="
-				font-family: Lato;
-				text-align: center;
-				font-size: 40px;
-				font-weight: 900;
-				color: #585858;
-			">
+		<div class="page_header">
+			<div class="page_header_title">
 			Dokumentacja Tanarea SDK
 			</div>
-			<div style="
-				font-family: Lato;
-				text-align: center;
-				font-size: 25px;
-				font-weight: 100;
-				margin-top: 30px;
-				color: #4d4d4d;
-			">
+			<div class="page_header_subtitle">
 				Makro TNR_SDK_NEW_EXCEPTION<br />
 			</div>
 		</div>
@@ -58,16 +36,16 @@
 			<div style="margin-top: 10px;">
 				Przeznaczeniem tego makra jest skrócenie kodu dla tworzenia nowych wyjątków i zwiększenia jego czytelności.
 			</div>
-			<div style="margin-top: 100px; font-weight: 900; font-size: 25px;">
+			<div class="spec_header">
 				TNR_SDK_NEW_EXCEPTION(ExceptionName, Export)
 			</div>
-			<div style="margin-top: 40px; width: 100%;">
-				<div style="width: 200px; float: left;">ExceptionName</div>
-				<div style="float: left; width: 80%;">Nazwa nowej klasy wyjątku.</div>
+			<div class="value_entry">
+				<div class="value_name">ExceptionName</div>
+				<div class="value_desc">Nazwa nowej klasy wyjątku.</div>
 			</div>
-			<div style="margin-top: 80px; width: 100%;">
-				<div style="width: 200px; float: left;">Export</div>
-				<div style="float: left; width: 80%;">Makro do wyeksportowania definicji klasy do biblioteki dynamicznej. Argument ten jest wymagany przy kompilacji kodu źródłowego do biblioteki binarnej.<br />
+			<div class="value_entry">
+				<div class="value_name">Export</div>
+				<div class="value_desc">Makro do wyeksportowania definicji klasy do biblioteki dynamicznej. Argument ten jest wymagany przy kompilacji kodu źródłowego do biblioteki binarnej.<br />
 					Jeśli definicja klasy ma nie być eksportowana do biblioteki dynamicznej, należy zastosować makro <span class="strong_word">TNR_SDK_DONT_EXPORT</span>.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">

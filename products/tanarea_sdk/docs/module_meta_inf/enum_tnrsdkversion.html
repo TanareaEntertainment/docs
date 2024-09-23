@@ -15,6 +15,22 @@
 				width: 96%;
 				height: 5px;
 			}
+			.value_entry
+			{
+				margin-top: 20px;
+				width: 100%;
+				float: left;
+			}
+			.value_name
+			{
+				width: 320px;
+				float: left;
+			}
+			.value_desc
+			{
+				float: left;
+				width: 80%;
+			}
 		</style>
 	</head>
 	<body>
@@ -23,7 +39,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Enumeracja tnrSDKVersion<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -34,21 +50,22 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
+				Typ enumeracji: Klasowa<br />
+				Typ podstawowy: ui32<br />
+			</div>
+			<div style="margin-top: 30px;">
+				Zawiera wspierane wersje Tanarea SDK przez obecną instalację.
 			</div>
 			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+				Zdefiniowane wartości:
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
+				<div class="value_name">VERSION_1_0_0</div>
+				<div class="value_desc">Wersja 1.0.0.</div>
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
+				<div class="value_name">INSTALLED_VERSION</div>
+				<div class="value_desc">Zawsze jest równa najwyższej wersji wspieranej przez zainstalowaną wersję na maszynie kompilującej.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>

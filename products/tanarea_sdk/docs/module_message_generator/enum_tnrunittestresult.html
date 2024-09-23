@@ -23,7 +23,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Enumeracja tnrUnitTestResult<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -34,21 +34,22 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
+				Typ enumeracji: Klasowa<br />
+				Typ podstawowy: ui8<br />
+			</div>
+			<div style="margin-top: 30px;">
+				Określa wynik testu jednostkowego.
 			</div>
 			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+				Zdefiniowane wartości:
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
+				<div class="value_name">FAILED</div>
+				<div class="value_desc">Określa rezultat testu jednostkowego jako negatywny.</div>
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
+				<div class="value_name">SUCCESS</div>
+				<div class="value_desc">Określa rezultat testu jednostkowego jako pozytywny.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>

@@ -23,7 +23,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Enumeracja tnrFileOpenMode
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -34,21 +34,30 @@
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
 			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
+				Typ enumeracji: Podstawowa<br />
+				Typ podstawowy: ui8<br />
+			</div>
+			<div style="margin-top: 30px;">
+				Dostarcza zestaw flag, które modyfikują sposób w jaki plik ma zostać otwarty.
 			</div>
 			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+				Zdefiniowane wartości:
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
+				<div class="value_name">READ</div>
+				<div class="value_desc">Umożliwia otwieranie plików w trybie do odczytu.</div>
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
+				<div class="value_name">WRITE</div>
+				<div class="value_desc">Umożliwia otwieranie plików w trybie do zapisu.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">ALLOW_TRUNCATE</div>
+				<div class="value_desc">Otwiera plik usuwając jego całą dotychczasową zawartość.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">CREATE_IF_NO_EXIST</div>
+				<div class="value_desc">Jeśli podczas otwierania pliku okaże się, że plik nie istnieje, flaga ta gwarantuje, że zostanie on automatycznie utworzony.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>

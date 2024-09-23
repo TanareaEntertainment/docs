@@ -2,3 +2,39 @@
 {
 	color: #00d9ff;
 }
+.value_entry
+{
+	margin-top: 20px;
+	width: 100%;
+	float: left;
+}
+.value_name
+{
+	width: 200px;
+	float: inherit;
+}
+.value_desc
+{
+	float: inherit;
+	width: 80%;
+}
+.spec_header
+{
+	margin-top: 100px;
+	font-weight: 900;
+	font-size: 25px;
+	margin-bottom: 40px;
+	float: left;
+}
+.class_member
+{
+	font-weight: 100;
+	margin-top: 30px;
+	font-size: 20px;
+	color: inherit;
+}
+a
+{
+	text-decoration: inherit;
+	color: inherit;
+}

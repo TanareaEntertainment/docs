@@ -3,15 +3,9 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../../../../styles/font.css">
 		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
 
 		<style>
-			body
-			{
-				color: #838383;
-				overflow-y: scroll;
-				overflow-x: hidden;
-				margin-bottom: 50px;
-			}
 			.header_underline
 			{
 				background-color: #ffffff;
@@ -23,28 +17,11 @@
 		</style>
 	</head>
 	<body>
-		<div style="
-				padding-top: 30px;
-				padding-bottom: 40px;
-				background-color: #e9e9e9;
-			">
-			<div style="
-				font-family: Lato;
-				text-align: center;
-				font-size: 40px;
-				font-weight: 900;
-				color: #585858;
-			">
+		<div class="page_header">
+			<div class="page_header_title">
 			Dokumentacja Tanarea SDK
 			</div>
-			<div style="
-				font-family: Lato;
-				text-align: center;
-				font-size: 25px;
-				font-weight: 100;
-				margin-top: 30px;
-				color: #4d4d4d;
-			">
+			<div class="page_header_subtitle">
 				Makro TNR_SDK_ASSERT<br />
 			</div>
 		</div>
@@ -59,16 +36,16 @@
 				Przeznaczeniem tego makra jest dostarczenie interfejsu dla bardziej asercji w stosunku do tego dostarczanego z <span class="strong_word">&lt;cassert&gt;</span>.<br />
 				Tak jak w interfejsie dostarczanym przez standardową bibliotekę C++ makro <span class="strong_word">TNR_SDK_ASSERT</span> działa tylko dla budowania w trybie Debug,<br />nie ma natomiast żadnego wpływu na budowanie w trybie Release.
 			</div>
-			<div style="margin-top: 100px; font-weight: 900; font-size: 25px;">
+			<div class="spec_header">
 				TNR_SDK_ASSERT(Condition, Action)
 			</div>
-			<div style="margin-top: 40px; width: 100%;">
-				<div style="width: 200px; float: left;">Condition</div>
-				<div style="float: left; width: 80%;">Wynik instrukcji warunkowych. Jeśli wynik tych instrukcji będzie fałszem, zostanie wykonana procedura zdefiniowana w argumencie <b>Action</b>.</div>
+			<div class="value_entry">
+				<div class="value_name">Condition</div>
+				<div class="value_desc">Wynik instrukcji warunkowych. Jeśli wynik tych instrukcji będzie fałszem, zostanie wykonana procedura zdefiniowana w argumencie <b>Action</b>.</div>
 			</div>
-			<div style="margin-top: 80px; width: 100%;">
-				<div style="width: 200px; float: left;">Action</div>
-				<div style="float: left; width: 80%;">Definicja procedury, która ma zostać wykonana, gdy <b>Condition</b> wyniesie fałsz. W przeciwnym razie procedura zostanie pominięta.</div>
+			<div class="value_entry">
+				<div class="value_name">Action</div>
+				<div class="value_desc">Definicja procedury, która ma zostać wykonana, gdy <b>Condition</b> wyniesie fałsz. W przeciwnym razie procedura zostanie pominięta.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>

@@ -23,7 +23,7 @@
 			Dokumentacja Tanarea SDK
 			</div>
 			<div class="page_header_subtitle">
-				Makro TNR_SDK_IF_PLATFORM<br />
+				Meta inf - zmienne i stałe<br />
 			</div>
 		</div>
 		<div class="header_underline" style="
@@ -33,22 +33,11 @@
 			background-color: #f20081;
 		"></div>
 		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
-			<div style="margin-top: 10px;">
-				Przeznaczeniem tego makra jest zwiększenie czytelności kodu specyficznego dla danych systemów operacyjnych.
-			</div>
 			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_WIN_NT(Body)
+				CompileDate
 			</div>
 			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Windows.</div>
-			</div>
-			<div class="spec_header">
-				TNR_SDK_IF_PLATFORM_LINUX(Body)
-			</div>
-			<div class="value_entry">
-				<div class="value_name">Body</div>
-				<div class="value_desc">Kod, który ma być aktywny podczas kompilacji dla systemów Linux.</div>
+				<div class="value_desc">To pole zawiera łańcuch znaków z datą kompilacji Tanarea SDK. Zawiera datę w formacie dostarczanym przez standardowe makro <span class="strong_word">__DATE__</span>.</div>
 			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
@@ -56,6 +45,21 @@
 					- v1.0.0: Dodano.
 				</div>
 			</div>
-		</div>		
+		</div>	
+		<div style="margin-top: 30px; background-color: white; width: 80%; margin-left: 10%; margin-right: 10%; float: left; height: 2px;"></div>	
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px; float: left;">
+			<div class="spec_header">
+				Version
+			</div>
+			<div class="value_entry">
+				<div class="value_desc">Pole tylko do odczytu, zawiera wszystko co dostarcza klasa <span class="strong_word">tnrVersionTanareaSDK</span>.</div>
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>	
 	</body>
 </html>

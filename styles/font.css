@@ -6,11 +6,13 @@
 
 body
 {
-	overflow-y: hidden;
+	overflow-y: scroll;
 	outline: 0px;
 	margin: 0px;
+	margin-bottom: 50px;
 	padding: 0px;
 	width: 100vw;
 	font-family: Lato;
 	background-color: #0034b6;
+	float: left;
 }
