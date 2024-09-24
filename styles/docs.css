@@ -16,7 +16,8 @@
 .value_desc
 {
 	float: inherit;
-	width: 80%;
+	width: calc(100% - 200px);
+	
 }
 .spec_header
 {
@@ -24,6 +25,7 @@
 	font-weight: 900;
 	font-size: 25px;
 	margin-bottom: 40px;
+	width: 100%;
 	float: left;
 }
 .class_member

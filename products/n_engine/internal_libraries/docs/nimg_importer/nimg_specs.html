@@ -1,0 +1,71 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+				Dokumentacja N Engine Libraries
+			</div>
+			<div class="page_header_subtitle">
+				Specyfikacja formatu NIMG
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				NIMG to format plików graficznych rastrowych. Stosowany przez produkty Tanarea Entertainment (w tym przez <span class="strong_word">N Engine</span>).<br />
+				W niniejszym artykule znajdziesz o nim informacje.
+			</div>
+			<div class="spec_header">
+				Format
+			</div>
+			<div style="margin-top: 10px; margin-bottom: 40px;">
+				Na początku pliku jest nagłówek. Można w nim znaleźć informacje co do ilości kanałów, oraz jakie mip mapy zostały wyeksportowane do pliku.<br />
+				NIMG obsługuje rozmiary mip map od 1x1-4096x4096. Nie obsługuje grafik o stosunku innej długości:wysokości jak 1:1. Dodatkowo każda mip mapa ma rozmiar potęgi 2.
+			</div>
+			<div class="spec_header">
+				Nagłówek
+			</div>
+			<div class="value_entry">
+				<div class="value_name">1B</div>
+				<div class="value_desc">Pierwszy bajt zapisuje informacje dotyczące formatu samych mip map. Możliwe są R-RGBA (czyli 1-4 kanałów).</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">1B</div>
+				<div class="value_desc">Pusty bajt do ewentualnego późniejszego wykorzystania.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">2B</div>
+				<div class="value_desc">Kolejne 2 bajty zawierają maskę bitową, w której zakodowana jest informacja, które mip mapy zostały wyeksportowane do pliku.</div>
+			</div>
+			<div class="spec_header">
+				Pozostała część
+			</div>
+			<div style="margin-top: 10px; margin-bottom: 40px;">
+				W pozostałej części formatu NIMG znajdują się same wyeksportowane mip mapy. Do każdej konkretnej wyeksportowanej mip mapy można uzyskać dostęp poprzez<br />
+				importer <span class="strong_word">NIMG_Importer</span> wywołując metodę <span class="strong_word">NIMG_Importer::GetMipsInfo()</span>.
+			</div>
+		</div>
+	</body>
+</html>
