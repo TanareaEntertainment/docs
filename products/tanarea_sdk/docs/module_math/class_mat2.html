@@ -1,0 +1,125 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			a:hover
+			{
+				color: #939393;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Klasa mat2
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Klasa reprezentująca matematyczną macierz 2x2.<br /><br />
+				Dostępne są warianty o różnym typie podstawowym:<br />
+				- i8mat2<br />
+				- i16mat2<br />
+				- i32mat2<br />
+				- i64mat2<br />
+				- ui8mat2<br />
+				- ui16mat2<br />
+				- ui32mat2<br />
+				- ui64mat2<br />
+				- f32mat2<br />
+				- f64mat2<br /><br />
+
+				Dodatkowo klasa <span class="strong_word">mat2</span> posiada zdefiniowane operatory:<br />
+				- operator[]<br />
+				- operator+<br />
+				- operator+=<br />
+				- operator-<br />
+				- operator-=<br />
+				- operator*<br />
+				- operator*=<br />
+				- operator/<br />
+				- operator/=<br /><br />
+
+				Część z tych operatorów jest kompatybilna z klasą <span class="strong_word">vec2</span>. Istnieje tylko jeden wymóg - obie klasy muszą mieć ten sam typ podstawowy.<br />
+				Wspomnianą kompatybilność można zapewnić dzięki możliwości statycznego rzutowania między typami podstawowymi za pomocą standardowego <span class="strong_word">static_cast&lt;&gt;</span>.<br /><br />
+
+				Układ elementów macierzy w pamięci jest w układzie rzędowym.
+			</div>
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; float: left;">
+				<div style="margin-bottom: 60px;">Składowe klasy</div>
+				<a href="class_mat2/data.html" target="_blank">
+					<div class="class_member">
+						mat2::data()
+					</div>
+				</a>
+				<a href="class_mat2/determinant.html" target="_blank">
+					<div class="class_member">
+						mat2::determinant()
+					</div>
+				</a>
+				<a href="class_mat2/inverse.html" target="_blank">
+					<div class="class_member">
+						mat2::inverse()
+					</div>
+				</a>
+				<a href="class_mat2/mat2.html" target="_blank">
+					<div class="class_member">
+						mat2::mat2()
+					</div>
+				</a>
+				<a href="class_mat2/rotate.html" target="_blank">
+					<div class="class_member">
+						mat2::rotate()
+					</div>
+				</a>
+				<a href="class_mat2/scale.html" target="_blank">
+					<div class="class_member">
+						mat2::scale()
+					</div>
+				</a>
+				<a href="class_mat2/transpose.html" target="_blank">
+					<div class="class_member">
+						mat2::transpose()
+					</div>
+				</a>
+
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

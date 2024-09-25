@@ -1,0 +1,129 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			a:hover
+			{
+				color: #939393;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Klasa vec2
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Klasa reprezentująca matematyczny wektor dwuwymiarowy.<br /><br />
+				Dostępne są warianty o różnym typie podstawowym:<br />
+				- i8vec2<br />
+				- i16vec2<br />
+				- i32vec2<br />
+				- i64vec2<br />
+				- ui8vec2<br />
+				- ui16vec2<br />
+				- ui32vec2<br />
+				- ui64vec2<br />
+				- f32vec2<br />
+				- f64vec2<br /><br />
+
+				Dodatkowo klasa <span class="strong_word">vec2</span> posiada zdefiniowane operatory:<br />
+				- operator[]<br />
+				- operator+<br />
+				- operator+=<br />
+				- operator-<br />
+				- operator-=<br />
+				- operator*<br />
+				- operator*=<br />
+				- operator/<br />
+				- operator/=<br />
+				- operator==<br /><br />
+
+				Wywołanie operatorów jest możliwe tylko, gdy oba wektory mają ten sam typ podstawowy.<br />
+				Wspomnianą kompatybilność można zapewnić dzięki możliwości statycznego rzutowania między typami podstawowymi za pomocą standardowego <span class="strong_word">static_cast&lt;&gt;</span>.
+			</div>
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; float: left;">
+				<div style="margin-bottom: 60px;">Składowe klasy</div>
+				<a href="class_vec2/abs.html" target="_blank">
+					<div class="class_member">
+						vec2::abs()
+					</div>
+				</a>
+				<a href="class_vec2/distance.html" target="_blank">
+					<div class="class_member">
+						vec2::distance()
+					</div>
+				</a>
+				<a href="class_vec2/dot.html" target="_blank">
+					<div class="class_member">
+						vec2::dot()
+					</div>
+				</a>
+				<a href="class_vec2/length.html" target="_blank">
+					<div class="class_member">
+						vec2::length()
+					</div>
+				</a>
+				<a href="class_vec2/normalize.html" target="_blank">
+					<div class="class_member">
+						vec2::normalize()
+					</div>
+				</a>
+				<a href="class_vec2/vec2.html" target="_blank">
+					<div class="class_member">
+						vec2::vec2()
+					</div>
+				</a>
+				<a href="class_vec2/x.html" target="_blank">
+					<div class="class_member">
+						vec2::x
+					</div>
+				</a>
+				<a href="class_vec2/y.html" target="_blank">
+					<div class="class_member">
+						vec2::y
+					</div>
+				</a>
+
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

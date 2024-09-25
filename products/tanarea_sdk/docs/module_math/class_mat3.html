@@ -1,0 +1,126 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			a:hover
+			{
+				color: #939393;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Klasa mat3
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Klasa reprezentująca matematyczną macierz 3x3.<br /><br />
+				Dostępne są warianty o różnym typie podstawowym:<br />
+				- i8mat3<br />
+				- i16mat3<br />
+				- i32mat3<br />
+				- i64mat3<br />
+				- ui8mat3<br />
+				- ui16mat3<br />
+				- ui32mat3<br />
+				- ui64mat3<br />
+				- f32mat3<br />
+				- f64mat3<br /><br />
+
+				Dodatkowo klasa <span class="strong_word">mat3</span> posiada zdefiniowane operatory:<br />
+				- operator[]<br />
+				- operator+<br />
+				- operator+=<br />
+				- operator-<br />
+				- operator-=<br />
+				- operator*<br />
+				- operator*=<br />
+				- operator/<br />
+				- operator/=<br /><br />
+
+				Część z tych operatorów jest kompatybilna z klasą <span class="strong_word">vec3</span>. Istnieje tylko jeden wymóg - obie klasy muszą mieć ten sam typ podstawowy.<br />
+				Wspomnianą kompatybilność można zapewnić dzięki możliwości statycznego rzutowania między typami podstawowymi za pomocą standardowego <span class="strong_word">static_cast&lt;&gt;</span>.<br /><br />
+				Możliwe jest również rzutowanie klasy <span class="strong_word">mat3</span> do <span class="strong_word">mat2</span>.
+
+				Układ elementów macierzy w pamięci jest w układzie rzędowym.
+			</div>
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; float: left;">
+				<div style="margin-bottom: 60px;">Składowe klasy</div>
+				<a href="class_mat3/data.html" target="_blank">
+					<div class="class_member">
+						mat3::data()
+					</div>
+				</a>
+				<a href="class_mat3/determinant.html" target="_blank">
+					<div class="class_member">
+						mat3::determinant()
+					</div>
+				</a>
+				<a href="class_mat3/inverse.html" target="_blank">
+					<div class="class_member">
+						mat3::inverse()
+					</div>
+				</a>
+				<a href="class_mat3/mat3.html" target="_blank">
+					<div class="class_member">
+						mat3::mat3()
+					</div>
+				</a>
+				<a href="class_mat3/rotate.html" target="_blank">
+					<div class="class_member">
+						mat3::rotate()
+					</div>
+				</a>
+				<a href="class_mat3/scale.html" target="_blank">
+					<div class="class_member">
+						mat3::scale()
+					</div>
+				</a>
+				<a href="class_mat3/transpose.html" target="_blank">
+					<div class="class_member">
+						mat3::transpose()
+					</div>
+				</a>
+
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

@@ -1,0 +1,146 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			a:hover
+			{
+				color: #939393;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div style="
+				font-family: Lato;
+				text-align: center;
+				font-size: 25px;
+				font-weight: 100;
+				margin-top: 30px;
+				color: #4d4d4d;
+			">
+				Klasa mat4
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Klasa reprezentująca matematyczną macierz 4x4.<br /><br />
+				Dostępne są warianty o różnym typie podstawowym:<br />
+				- i8mat4<br />
+				- i16mat4<br />
+				- i32mat4<br />
+				- i64mat4<br />
+				- ui8mat4<br />
+				- ui16mat4<br />
+				- ui32mat4<br />
+				- ui64mat4<br />
+				- f32mat4<br />
+				- f64mat4<br /><br />
+
+				Dodatkowo klasa <span class="strong_word">mat4</span> posiada zdefiniowane operatory:<br />
+				- operator[]<br />
+				- operator+<br />
+				- operator+=<br />
+				- operator-<br />
+				- operator-=<br />
+				- operator*<br />
+				- operator*=<br />
+				- operator/<br />
+				- operator/=<br /><br />
+
+				Część z tych operatorów jest kompatybilna z klasą <span class="strong_word">vec4</span>. Istnieje tylko jeden wymóg - obie klasy muszą mieć ten sam typ podstawowy.<br />
+				Wspomnianą kompatybilność można zapewnić dzięki możliwości statycznego rzutowania między typami podstawowymi za pomocą standardowego <span class="strong_word">static_cast&lt;&gt;</span>.<br /><br />
+				Możliwe jest również rzutowanie klasy <span class="strong_word">mat4</span> do <span class="strong_word">mat2</span> i <span class="strong_word">mat3</span>.
+
+				Układ elementów macierzy w pamięci jest w układzie rzędowym.
+			</div>
+			<div style="margin-top: 100px; font-weight: 900; font-size: 25px; float: left;">
+				<div style="margin-bottom: 60px;">Składowe klasy</div>
+				<a href="class_mat4/construct_look_at.html" target="_blank">
+					<div class="class_member">
+						mat4::construct_look_at()
+					</div>
+				</a>
+				<a href="class_mat4/construct_orthogonal.html" target="_blank">
+					<div class="class_member">
+						mat4::construct_orthogonal()
+					</div>
+				</a>
+				<a href="class_mat4/construct_perspective.html" target="_blank">
+					<div class="class_member">
+						mat4::construct_perspective()
+					</div>
+				</a>
+				<a href="class_mat4/data.html" target="_blank">
+					<div class="class_member">
+						mat4::data()
+					</div>
+				</a>
+				<a href="class_mat4/determinant.html" target="_blank">
+					<div class="class_member">
+						mat4::determinant()
+					</div>
+				</a>
+				<a href="class_mat4/inverse.html" target="_blank">
+					<div class="class_member">
+						mat4::inverse()
+					</div>
+				</a>
+				<a href="class_mat4/mat4.html" target="_blank">
+					<div class="class_member">
+						mat4::mat4()
+					</div>
+				</a>
+				<a href="class_mat4/rotate.html" target="_blank">
+					<div class="class_member">
+						mat4::rotate()
+					</div>
+				</a>
+				<a href="class_mat4/scale.html" target="_blank">
+					<div class="class_member">
+						mat4::scale()
+					</div>
+				</a>
+				<a href="class_mat4/translate.html" target="_blank">
+					<div class="class_member">
+						mat4::translate()
+					</div>
+				</a>
+				<a href="class_mat4/transpose.html" target="_blank">
+					<div class="class_member">
+						mat4::transpose()
+					</div>
+				</a>
+
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>

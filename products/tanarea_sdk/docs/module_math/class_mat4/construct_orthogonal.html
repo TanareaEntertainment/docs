@@ -1,0 +1,94 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			.value_name
+			{
+				width: 300px;
+			}
+			.value_desc
+			{
+				width: calc(100% - 300px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div class="page_header_subtitle">
+				Składowa mat4::construct_orthogonal()
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Konstruuje i zwraca ortogonalną macierz projekcyjną. Metoda ta jest dostępna tylko dla macierzy, których typ podstawowy to liczba zmiennoprzecinkowa.
+			</div>
+			<div class="spec_header">
+				mat4::construct_orthogonal(frustum_edges, z_near, z_far)
+			</div>
+			<div class="value_entry">
+				<div class="value_name">frustum_edges</div>
+				<div class="value_desc">Całkowite szerokość i wysokość jaką ma obejmować macierz projekcyjna.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">z_near</div>
+				<div class="value_desc">Odległość projekcyjnego bliskiego planu od obserwatora.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">z_far</div>
+				<div class="value_desc">Odległość projekcyjnego dalekiego planu od obserwatora.</div>
+			</div>
+		</div>
+		<div style="margin-top: 30px; background-color: white; width: 80%; margin-left: 10%; margin-right: 10%; float: left; height: 2px;"></div>	
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px; float: left;">
+			<div class="spec_header">
+				mat4::construct_orthogonal(left_edge, right_edge, bottom_edge, top_edge, z_near, z_far)
+			</div>
+			<div class="value_entry">
+				<div class="value_name">left_edge</div>
+				<div class="value_desc">Szerokość projekcji na lewo od centralnego jej punktu.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">right_edge</div>
+				<div class="value_desc">Szerokość projekcji na prawo od centralnego jej punktu.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">bottom_edge</div>
+				<div class="value_desc">Wysokość projekcji w dół od centralnego jej punktu.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">top_edge</div>
+				<div class="value_desc">Wysokość projekcji w górę od centralnego jej punktu.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">z_near</div>
+				<div class="value_desc">Odległość projekcyjnego bliskiego planu od obserwatora.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">z_far</div>
+				<div class="value_desc">Odległość projekcyjnego dalekiego planu od obserwatora.</div>
+			</div>
+		</div>
+	</body>
+</html>
