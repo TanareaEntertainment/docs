@@ -1,0 +1,72 @@
+<html>
+<head lang="pl">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../../../styles/font.css">
+	<link rel="stylesheet" href="../../../../styles/docs.css">
+	<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+	<style>
+		
+		.header_underline
+		{
+			background-color: #ffffff;
+			margin-top: 0px;
+			margin-left: 2%;
+			width: 96%;
+			height: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="page_header">
+		<div class="page_header_title">
+		Dokumentacja Tanarea SDK
+		</div>
+		<div class="page_header_subtitle">
+			InterprocessCom - Ogólne
+		</div>
+	</div>
+	<div class="header_underline" style="
+		width: 100%;
+		margin: 0%;
+		height: 10px;
+		background-color: #f20081;
+	"></div>
+	<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+		<div style="margin-top: 10px;">
+			Moduł <span class="strong_word">Interprocess</span> dostarcza zestawu interfejsów do komunikacji między procesami.
+		</div>
+		<div style="margin-top: 50px;">
+			Pierwszy interfejs znajduje się w przestrzeni nazw tnr::interprocess::socket. Dostarcza klas i struktur do komunikacji między procesami za pomocą uniksowych gniazd domenowych.
+		</div>
+		<div style="margin-top: 30px;">
+			Wymagane zależności dla interfejsu socket:<br />
+			- tnr_sdk_string<br />
+			- tnr_sdk_interprocess_socket<br />
+			- tnr_sdk_message<br />
+			- tnr_sdk_debug_layer<br />
+			- tnr_sdk_file
+		</div>
+		<div style="margin-top: 50px;">
+			Drugi interfejs można znaleźć w przestrzeni nazw tnr::interprocess::shared. Tutaj znajdują się odpowiednie klasy i struktury umożliwiające komunikację między procesami za pomocą pamięci współdzielonej.
+		</div>
+		<div style="margin-top: 30px;">
+			Wymagane zależności dla interfejsu shared:<br />
+			- tnr_sdk_string<br />
+			- tnr_sdk_debug_layer<br />
+			- tnr_sdk_message<br />
+			- tnr_sdk_interprocess_shared
+		</div>
+		<div style="margin-top: 50px;">
+			Trzeci interfejs jest niewielki. Znajduje się w przestrzeni nazw tnr::interprocess::subprocess. Aktualnie służy on przede wszystkim do tworzenia nowych procesów.
+		</div>
+		<div style="margin-top: 30px;">
+			Wymagane zależności dla interfejsu shared:<br />
+			- tnr_sdk_string<br />
+			- tnr_sdk_debug_layer<br />
+			- tnr_sdk_message<br />
+			- tnr_sdk_interprocess_subprocess
+		</div>
+	</div>		
+</body>
+</html>

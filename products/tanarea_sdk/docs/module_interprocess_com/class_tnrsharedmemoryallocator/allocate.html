@@ -1,0 +1,74 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+
+			.value_name
+			{
+				width: 300px;
+				float: inherit;
+			}
+			.value_desc
+			{
+				float: inherit;
+				width: calc(100% - 300px);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div class="page_header_subtitle">
+				Składowa tnrSharedMemoryAllocator::Allocate()<br />
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px; float: left;">
+			<div style="margin-top: 10px;">
+				Alokuje pamięć współdzieloną i zwraca do niej uchwyt, za pomocą którego dostęp otrzymuje proces alokujący.<br />
+				Tworzy również obiekt <span class="strong_word">tnrSharedMemoryAllocator</span> i zwraca jego adres. Metoda statyczna.
+			</div>
+			<div class="spec_header">
+				tnrSharedMemoryAllocator::Allocate(CreationInfo, SharedMemoryHandle)
+			</div>
+			<div class="value_entry">
+				<div class="value_name">CreationInfo</div>
+				<div class="value_desc">Zestaw informacji wymagany do alokacji pamięci współdzielonej.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">SharedMemoryHandle</div>
+				<div class="value_desc">Parametr wyjściowy, za jego pomocą jest zwracany obiekt klasy <span class="strong_word">tnrSharedMemory</span>.</div>
+			</div>
+			<div class="spec_header">
+				Generowane wiadomości
+			</div>
+			<div class="value_entry">
+				<div class="value_name">0x00000018</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">0x00000019</div>
+			</div>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div class="page_header_subtitle">
+				Enumeracja tnrInterprocessConnectionCreateFlag
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Typ enumeracji: Podstawowa<br />
+				Typ podstawowy: ui8<br />
+			</div>
+			<div style="margin-top: 30px;">
+				Modyfikuje konstruowanie obiektów klasy tnrInterprocessSocket.
+			</div>
+			<div class="spec_header">
+				Zdefiniowane wartości:
+			</div>
+			<div class="value_entry">
+				<div class="value_name">NO_FLAGS</div>
+				<div class="value_desc">Brak flag, proces konstruowania nie jest modyfikowany.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">SOCKET_OWNER</div>
+				<div class="value_desc">Właściciel gniazda. Oznacza, że tworzony obiekt będzie miał za zadanie hostować tworzone uniksowe gniazdo domenowe.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">WAIT_FOR_SOCKET</div>
+				<div class="value_desc">Przeznaczone dla klientów łączących się z uniksowym gniazdem domenowym. Jeśli zdefiniowane, klient będzie czekał na utworzenie gniazda zanim spróbuje się połączyć.</div>
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>
