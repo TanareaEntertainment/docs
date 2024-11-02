@@ -1,0 +1,75 @@
+<html></html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+
+		<style>
+			
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Dokumentacja Tanarea SDK
+			</div>
+			<div class="page_header_subtitle">
+				Struktura tnrWindowInfo<br />
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #f20081;
+		"></div>
+		<div style="margin-left: 15%; color: white; font-size: 20px; margin-top: 40px;">
+			<div style="margin-top: 10px;">
+				Przechowuje informacje na temat okna.
+			</div>
+			<div class="spec_header">
+				Zdefiniowane składowe:
+			</div>
+			<div class="value_entry">
+				<div class="value_name">DisplayPtr</div>
+				<div class="value_desc">Wskaźnik do wyświetlacza reprezentowany przez klasę <span class="strong_word">tnrDisplay</span>. Wymagany inny niż <span class="strong_word">nullptr</span> dla operacji związanych z wyświetlaczem,<br />
+					takie jak centrowanie okna czy też wyświetlanie w trybie pełnoekranowym.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">Position</div>
+				<div class="value_desc">Pozycja okna. Pole opcjonalne, domyślna wartość to <span class="strong_word">std::nullopt</span>.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">Size</div>
+				<div class="value_desc">Rozmiar okna. Musi być większe niż 0, zarówno dla szerokości jak i wysokości.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">RefreshRate</div>
+				<div class="value_desc">Częstotliwość odświeżania. Domyślna wartość to 0.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">Properties</div>
+				<div class="value_desc">Modyfikatory okna.</div>
+			</div>
+			<div class="value_entry">
+				<div class="value_name">WindowTitle</div>
+				<div class="value_desc">Tytuł okna.</div>
+			</div>
+			<div style="width: 100%; float: right; margin-top: 130px;">
+				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
+				<div style="margin-top: 10px; margin-left: 20px;">
+					- v1.0.0: Dodano.
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>
