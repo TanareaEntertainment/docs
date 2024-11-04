@@ -267,10 +267,33 @@
 					Próba odczytu/zapisu z/do międzyprocesowego gniazda jako jego właściciel. Rzuca wyjątkiem <span class="strong_word">tnrInterprocessSocketUnvallowedIO</span>.</span>
 				</div>
 			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000027</div>
+				<div>
+					Tworzenie okna z kontekstem OpenGL 4.0 jest przestarzałe. Zalecane jest użycie OpenGL 4.2 tak często jak to możliwe.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000028</div>
+				<div>
+					Próba podmiany buforów, które nie istnieją. Utwórz <span class="strong_word">tnrWindow</span> z flagą <span class="strong_word">OPENGL_CORE_4_0_SURFACE</span> lub <span class="strong_word">OPENGL_CORE_4_2_SURFACE</span>.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrNoDoubleBuffering</span>.
+				</div>
+			</div>
+			<div class="list_entry">
+				<div class="entry_type">0x00000029</div>
+				<div>
+					Żaden kontekst OpenGL nie jest przypisany do okna. Utwórz <span class="strong_word">tnrWindow</span> z flagą <span class="strong_word">OPENGL_CORE_4_0_SURFACE</span> lub <span class="strong_word">OPENGL_CORE_4_2_SURFACE</span>.<br />
+					<span style="margin-left: 200px;">Rzuca wyjątkiem <span class="strong_word">tnrInvalidContext</span>.
+				</div>
+			</div>
 			<div style="width: 100%; float: right; margin-top: 130px;">
 				<div style="font-weight: 900; font-size: 25px; margin-bottom: 30px;">Historia zmian</div>
 				<div style="margin-top: 10px; margin-left: 20px;">
 					- v1.0.0: Dodano.
+				</div>
+				<div style="margin-top: 20px; margin-left: 20px;">
+					- v1.1.0: Dodano wiadomości 0x00000027, 0x00000028, 0x00000029.
 				</div>
 			</div>
 		</div>		
