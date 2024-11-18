@@ -93,6 +93,20 @@
 				Należy ją wywołać w trakcie inicjalizacji aplikacji PO inicjalizacji kontekstu OpenGL. W przeciwnym wypadku wystąpi niezdefiniowane zachowanie.<br />
 				Wywoływanie jakiejkolwiek funkcji NBGK bez uprzedniego zainicjalizowania za pomocą <span class="strong_word">nbAllocator_Allocate()</span> skończy się niezdefiniowanym zachowaniem.
 			</div>
+			<div class="entry">Funkcja - nbAllocator_SetWindowAspect()</div>
+			<div class="entry_description">
+				Ustawia stosunek szerokości do wysokości okna, umożliwia to poprawne renderowanie tekstu dla różnego rozmiaru okien. Jako argument przyjmuje właśnie wspomniany stosunek.
+			</div>
+			<div class="entry">Funkcja - nbAllocator_AllocateImage()</div>
+			<div class="entry_description">
+				Alokuje obrazek do wyrenderowania go. Zwraca uchwyt do obrazka do późniejszego użycia. Funkcja przyjmuje dwa argumenty: <b>Pixels</b>, <b>ImageDimensions</b>.<br /><br />
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Pixels</b> - Dane pikseli. Wymagane.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>ImageDimensions</b> - Rozmiar obrazku. Szerokość i wysokość.</span>
+				</div>
+			</div>
 			<div class="entry">Funkcja - nbAllocator_Deallocate()</div>
 			<div class="entry_description">
 				Zwalnia wszystkie wcześniej zasoby załadowane przez <span class="strong_word">nbAllocator_Allocate()</span>.<br />
@@ -126,6 +140,16 @@
 				</div>
 				<div style="margin-top: 10px;">
 					<span style="margin-left: 20px;"><b>ColorText</b> - Kolor w formacie RGB w zakresie (0.0f-1.0f). Podany kolor zostanie zaaplikowany do rysowanego tekstu.</span>
+				</div>
+			</div>
+			<div class="entry">Funkcja - nbImageBox()</div>
+			<div class="entry_description">
+				Rysuje w oknie obrazek. Przyjmowane są 2 argumenty: <b>Image</b>, <b>Position</b>.<br /><br />
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Image</b> - Uchwyt do obrazka do wyrenderowania.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Position</b> - Pozycja obrazka. Przyjmowana wartość to z góry ustalone koordynaty pikseli.</span>
 				</div>
 			</div>
 		</div>
