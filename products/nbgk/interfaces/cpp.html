@@ -90,15 +90,69 @@
 			</div>
 			<div class="entry">Klasa - NBAllocator</div>
 			<div class="entry_description">
-				
+				Klasa <span class="strong_word">NBAllocator</span> jest konieczna do działania NBGK. Alokuje i ładuje wszystkie wymagane zasoby do pamięci VRAM.<br />
+				Należy obiekt jest klasy skonstruować w przeznaczonym do tego polu - <span class="strong_word">Allocator</span> - PO inicjalizacji kontekstu OpenGL. <br />
+				Wywołanie jakiejkolwiek metody NBGK bez uprzedniej inicjalizacji <span class="strong_word">Allocatora</span> skończy się niezdefiniowanym zachowaniem.
 			</div>
-			<div class="entry">Klasa - NBColorBox</div>
+			<div class="entry">Metoda - NBAllocator::AllocateImage()</div>
 			<div class="entry_description">
-				
+				Alokuje obrazek do wyrenderowania go. Zwraca uchwyt do obrazka do późniejszego użycia. Funkcja przyjmuje dwa argumenty: <b>Pixels</b>, <b>ImageDimensions</b>.<br /><br />
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Pixels</b> - Dane pikseli. Wymagane.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>ImageDimensions</b> - Rozmiar obrazka. Szerokość i wysokość.</span>
+				</div>
 			</div>
-			<div class="entry">Klasa - NBTextBox</div>
+			<div class="entry">Metoda - NBAllocator::NBAllocator()</div>
 			<div class="entry_description">
-				
+				Tak jak konstruktor bez argumentowy alokuje i ładuje wszystkie wymagane zasoby do pamięci VRAM. Ponadto dostosowuje tekst do rozmiaru okna.<br />
+				Posiada jeden argument: <b>WindowAspect</b>.
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>WindowAspect</b> - Stosunek szerokości do wysokości okna.</span>
+				</div>
+			</div>
+
+			<div class="entry">Metoda - NBColorBox::NBColorBox()</div>
+			<div class="entry_description">
+				Rysuje w oknie kolorowy prostokąt. Posiada 3 argumenty: <b>Color</b>, <b>Position</b>, <b>Dimensions</b>.
+
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Color</b> - Kolor w formacie RGB w zakresie (0.0f-1.0f). Podany kolor zostanie zaaplikowany do rysowanego prostokąta.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Position</b> - Pozycja prostokąta. Przyjmowana wartość to z góry ustalone koordynaty pikseli.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Dimensions</b> - Rozmiar prostokąta. Przyjmowana wartość to z góry ustalone koordynaty pikseli.</span>
+				</div>
+			</div>
+			<div class="entry">Metoda - NBTextBox::NBTextBox()</div>
+			<div class="entry_description">
+				Rysuje w oknie kolorowy tekst. Przyjmowane są 4 argumenty: <b>Text</b>, <b>PositionText</b>, <b>ScaleText</b>, <b>ColorText</b>
+
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Text</b> - Tekst do wyrenderowania.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>PositionText</b> - Pozycja tekstu. Przyjmowana wartość to zakres (-1.0f - 1.0f) w obu wymiarach.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>ScaleText</b> - Skalar rozmiaru renderowanego tekstu.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>ColorText</b> - Kolor w formacie RGB w zakresie (0.0f-1.0f). Podany kolor zostanie zaaplikowany do rysowanego tekstu.</span>
+				</div>
+			</div>
+			<div class="entry">Metoda - NBImageBox::NBImageBox()</div>
+			<div class="entry_description">
+				Rysuje w oknie obrazek. Przyjmowane są 2 argumenty: <b>Image</b>, <b>Position</b>.<br /><br />
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Image</b> - Uchwyt do obrazka do wyrenderowania.</span>
+				</div>
+				<div style="margin-top: 10px;">
+					<span style="margin-left: 20px;"><b>Position</b> - Pozycja obrazka. Przyjmowana wartość to z góry ustalone koordynaty pikseli.</span>
+				</div>
 			</div>
 		</div>
 	</body>
