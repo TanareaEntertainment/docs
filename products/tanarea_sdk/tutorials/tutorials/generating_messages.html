@@ -1,0 +1,133 @@
+<html>
+	<head lang="pl">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../../../../styles/font.css">
+		<link rel="stylesheet" href="../../../../styles/page_header.css">
+		<link rel="stylesheet" href="../../../../styles/code.css">
+		<link rel="stylesheet" href="../../../../styles/docs.css">
+
+		<style>
+			.header
+			{
+				font-family: Lato;
+				text-align: left;
+				font-size: 35px;
+				margin-top: 80px;
+				margin-left: 70px;
+				font-weight: 900;
+				margin-bottom: 8px;
+				color: #e5e5e5;
+			}
+			body
+			{
+				color: #838383;
+				background-color: #065700;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				margin-bottom: 50px;
+			}
+			.entry
+			{
+				font-weight: 100;
+				font-size: 25px;
+				margin-top: 20px;
+			}
+			.entry_description
+			{
+				margin-left: 40px;
+				margin-top: 3px;
+			}
+			.entry_underline
+			{
+				background-color: inherit;
+				height: 5px;
+				width: 70%;
+				margin-left: -20px;
+				margin-top: 10px;
+			}
+
+			.header_underline
+			{
+				background-color: #ffffff;
+				margin-top: 0px;
+				margin-left: 2%;
+				width: 96%;
+				height: 5px;
+			}
+			
+			a
+			{
+				text-decoration: inherit;
+				color: inherit;
+				
+			}
+			a:hover
+			{
+				color: #f20081;
+				color: #12ff00;
+				color: rgb(147, 147, 147);
+				/*background-color: white;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page_header">
+			<div class="page_header_title">
+			Tanarea SDK - Generowanie wiadomości 
+			</div>
+		</div>
+		<div class="header_underline" style="
+			width: 100%;
+			margin: 0%;
+			height: 10px;
+			background-color: #12ff00;
+		"></div>
+		<div style="margin-left: 25%; color: white; font-size: 16px; margin-top: 50px; tab-size: 5;">
+			Tanarea SDK dostarcza interfejs do generowania wiadomości. W tym przewodniku poznasz jak go używać. Spójrz na poniższy kod:
+			<div class="code_block">
+				<span class="type">int</span> <span class="function">main</span>()<br />
+				{<br />
+					<span style="margin-left: 30px;"><span class="type">tnr::message_generator::tnrMessageEmitter</span> Emitter;</span><br />
+					<br />
+					<span style="margin-left: 30px;">Emitter.<span class="function">EmitMessage</span></span><br />
+					<span style="margin-left: 30px;">(</span><br />
+					<span style="margin-left: 60px;"><span class="type">tnr::message_generator::tnrMessageInfo</span><br /></span>
+					<span style="margin-left: 60px;">{<br /></span>
+					<span style="margin-left: 90px;">.Message = <span class="type">tnr::tnrString</span>(<span class="string">"This is info."</span>),<br /></span>
+					<span style="margin-left: 90px;">.Level = <span class="type">tnr::message_generator::tnrMessageLevel::</span><span class="keyword">LEVEL0_INFO</span><br /></span>					
+					<span style="margin-left: 60px;">}<br /></span>
+					<span style="margin-left: 30px;">);<br /></span>
+					<br />
+					<span style="margin-left: 30px;"><span class="keyword"><b>return</b></span> 0;<br /></span>
+				}
+			</div>
+			Zdefiniowana została tutaj funkcja <span class="strong_word">main</span>, a w niej obiekt typu <span class="strong_word">tnr::message_generator::tnrMessageEmitter</span>.<br />
+			Zapytasz <b>"dlaczego nie singletone z metodami statycznymi?"</b> - gdyż w zamyśle <span class="strong_word">tnr::message_generator::tnrMessageEmitter</span> ma umożliwiać<br />
+			utworzenie kilku loggerów, które można dostosować zależnie od potrzeby za pośrednictwem callbacków (które są zaplanowane na wersję 2.0.0 Tanarea SDK).<br /><br />
+			Przejdźmy do samego generowania wiadomości. Z obiektu <span class="strong_word">Emitter</span> wywołujemy metodę <span class="strong_word">EmitMessage</span>. Zwracając uwagę na dokumentację Tanarea SDK, <br />
+			można zobaczyć, że metoda ta ma trzy przeciążenia. Ja tutaj skorzystałem myślę z najbardziej przydatnej - tej przyjmującej <span class="strong_word">tnrMessageInfo</span>.<br /><br />
+			W pierwszej składowej struktury <span class="strong_word">tnrMessageInfo</span> podałem wiadomość do wyświetlenia. W drugiej składowej podałem <b>poziom wiadomości</b>. Czymże to jest?<br /><br />
+
+			<b>Poziom wiadomości</b> determinuje "ważność" wiadomości. Mówiąc prościej - wraz z poziomami zmienia się kolor oraz nagłówek wyświetlanej w konsoli wiadomości.<br />
+			Poziom 0 oznacza zwykłą informacje. Poziom 1 jest przeznaczony dla ostrzeżeń przed błędami lub informacjami o samych błędach. Ostatni poziom 2 oznacza błędy krytyczne,<br />
+			czyli takie z którymi program nie może dalej funkcjonować. Ponadto według konwencji SDK dochodząc do ostatniego poziomu <span class="strong_word">LEVEL2_ERROR</span> możemy się spodziewać wyjątków.<br />
+			Nie używaj więc tego poziomu dla każdego możliwego błędu. Poniżej można zobaczyć jak wyglądają komunikaty każdego z poziomów:
+
+			<div class="code_block">
+				<span style="color: #0081f2;">[&nbsp;  INFO ] This is info.<br /></span>
+				<span style="color: #fff200;">[WARNING] This is warning.<br /></span>
+				<span style="color: #ff0000;">[ ERROR ] This is error.<br /></span>
+			</div>
+
+			
+			Generowanie wiadomości jest przydatne, ale czasem może być uciążliwe - zwłaszcza w przypadku gdy wiadomości się powtarzają ileś razy.<br />
+			Aby temu zapobiec zostały stworzone składowe <span class="strong_word">SetMessageLimit</span> oraz <span class="strong_word">ResetMessageCounter</span>. Pierwsza metoda pozwala na ograniczenie liczby generowanych wiadomości.<br />
+			Należy jedynie podać typ wiadomości, który zostanie ograniczony oraz ile maksymalnie wiadomości tego typu może zostać wygenerowane. Jeśli liczba wygenerowanych wiadomości dobije do limitu,<br />generowanie wiadomości danego typu zostanie wstrzymane.
+			Jeśli chcemy wznowić generowanie wiadomości wystarczy wywołać metodę <span class="strong_word">ResetMessageCounter</span>, która wyzeruje licznik wygenerowanych wiadomości i tym samym wznowi ich generowanie. Domyślnie limity są wyłączone.
+
+			
+			
+			
+		</div>
+	</body>
+</html>

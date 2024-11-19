@@ -1,0 +1,32 @@
+
+
+.type
+{
+	color: #3ca829;
+}
+
+.keyword
+{
+	color: #0081f2;
+}
+
+.function
+{
+	color: #ffc641;
+}
+
+.code_block
+{
+	background-color: #202020; 
+	padding: 30px;
+	margin-top: 20px; 
+	margin-bottom: 20px;
+	width:max-content; 
+	font-family: monospace;
+	color: #a9e0ff;
+}
+
+.string
+{
+	color: #ff8000;
+}
