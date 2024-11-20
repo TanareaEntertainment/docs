@@ -104,14 +104,14 @@
 				}
 			</div>
 
-			W powyższym przykładzie najpierw utworzyłem obiekt klasy <span class="strong_word">tnr::file::tnrFileInfoSet</span> podając jednocześnie do konstruktora ścieżkę do pliku do sprawdzenia. <br />
-			Użyta klasa podczas konstruowania zbiera wszystkie informacje nt. pliku.  Następnie w bloku <span class="strong_word">if</span> sprawdzam czy plik istnieje, jeśli tak to wyświetlam nazwę pliku oraz jego rozmiar.<br /><br />
+			W powyższym przykładzie najpierw utworzyliśmy obiekt klasy <span class="strong_word">tnr::file::tnrFileInfoSet</span> podając do konstruktora ścieżkę do pliku do sprawdzenia. <br />
+			Podczas tworzenia obiektu, zbierane są wszystkie informacje nt. pliku reprezentowanego przez ścieżkę podaną w konstruktorze. Następnie w bloku instrukcji <span class="strong_word">if</span> sprawdzamy czy plik istnieje, jeśli tak to wyświetlamy nazwę pliku oraz jego rozmiar.<br /><br />
 
 			Skoro wiadomo już, że plik istnieje, to można spróbować go otworzyć. Mamy do wyboru dwa sposoby:<br />
 			- Za pomocą klasy <span class="strong_word">tnr::file::tnrFileText</span><br />
 			- Za pomocą klasy <span class="strong_word">tnr::file::tnrFileBinary</span><br /><br />
 
-			Pierwszy służy do zarządzania plikami tekstowymi, drugi do plików binarnych. Z racji, że nazwa naszego pliku ma rozszerzenie .txt wybór jest oczywisty.<br />
+			Pierwszy służy do zarządzania plikami tekstowymi, drugi do zarządzania plikami binarnymi. Z racji, że nazwa naszego pliku ma rozszerzenie .txt wybór jest oczywisty.<br />
 			<div class="code_block">
 				#include <span class="string">&lt;iostream&gt;</span><br />
 				#include <span class="string">&lt;TanareaSDK.hpp&gt;</span><br /><br />
@@ -147,16 +147,16 @@
 					<span style="margin-left: 30px;"><span class="keyword"><b>return</b></span> 0;<br /></span>
 				}
 			</div>
-			Kod podzieliłem na segmenty zależnie od użytego sposobu odczytywania danych z pliku. Podstawową częścią każdego segmentu jest utworzenie obiektu klasu <span class="strong_word">tnrFileText</span>.<br />
-			Podałem do konstruktora nazwę pliku do otwarcia, oraz tryb w jakim plik ma być otwarty. Chcemy przejrzeć tylko zawartość pliku w związku z tym wystarczy flaga <span class="strong_word">READ</span>.<br /><br />
+			Kod został podzielony na segmenty zależnie od użytego sposobu odczytywania danych z pliku. Podstawową częścią każdego segmentu jest utworzenie obiektu klasy <span class="strong_word">tnrFileText</span>.<br />
+			Podaliśmy do konstruktora nazwę pliku do otwarcia, oraz tryb w jakim plik ma być otwarty. Chcemy przejrzeć tylko zawartość pliku w związku z tym wystarczy flaga <span class="strong_word">READ</span>.<br /><br />
 			
-			Idąc dalej każdy segment zawiera również pętlę while bazującą na wartości zwracanej przez metodę <span class="strong_word">IsEndOfFile()</span>. Metoda ta zwraca informację czy dotarliśmy do końca pliku.<br />
+			Idąc dalej każdy blok zawiera również pętlę while bazującą na wartości zwracanej przez metodę <span class="strong_word">IsEndOfFile()</span>. Metoda ta zwraca informację czy dotarliśmy do końca pliku.<br />
 			Pętla więc trwa dopóki nie odczytaliśmy całego pliku.<br /><br />
 
-			Przejdźmy do samych segmentów. W pierwszym segmencie wywoływana jest metoda <span class="strong_word">ReadLine()</span>. Oznacza to, że odczytujemy plik po jednej linijce danych<br />
+			Przejdźmy do samych segmentów. W pierwszym wywoływana jest metoda <span class="strong_word">ReadLine()</span>. Oznacza to, że odczytujemy plik po jednej linijce danych<br />
 			(czyli od początku linii do białego znaku nowej linii <span class="strong_word">\n</span>). Dane zwracane przez <span class="strong_word">ReadLine()</span> nie zawierają znaku nowej linii.<br /><br />
 
-			Drugi segment odczytuje plik w podobny sposób co za pomocą <span class="strong_word">ReadLine</span> - z tą różnicą, że <span class="strong_word">ReadFor</span> odczytuje dane aż napotka znak podany w argumencie <br />
+			Drugi odczytuje plik w podobny sposób co za pomocą <span class="strong_word">ReadLine</span> - z tą różnicą, że <span class="strong_word">ReadFor</span> odczytuje dane aż napotka znak podany w argumencie <br />
 			(w podanym przykładzie odczytuje od początku danych do znaku <span class="strong_word">#</span>).<br /><br />
 
 			Z kolei trzeci segment odczytuje zwyczajnie znak po znaku. Wyświetlane więc w tym przykładzie są pojedyncze znaki.<br /><br />
@@ -164,7 +164,8 @@
 			<div class="code_block" style="color: white;">
 				Ala ma kota<br />
 				Kot nie ma Ali<br />
-				Ala ma kotaKot nie ma Ali<br />
+				Ala ma kota<br /><br />
+				Kot nie ma Ali<br />
 				A<br />
 				l<br />
 				a<br />
@@ -176,6 +177,7 @@
 				o<br />
 				t<br />
 				a<br />
+				<br /><br />
 				K<br />
 				o<br />
 				t<br />
@@ -212,9 +214,8 @@
 					<span style="margin-left: 30px;"><span class="keyword"><b>return</b></span> 0;<br /></span>
 				}
 			</div>
-			Zmiana flagi <span class="strong_word">READ</span> na <span class="strong_word">WRITE</span> sprawiła, że teraz plik jest otwarty w trybie do zapisu. Dodatkowo zdefiniowałem również flagę <span class="strong_word">ALLOW_TRUNCATE</span>, która powoduje wyczyszczenie obecnej zawartości pliku,<br />
-			by zapisywać do pustego pliku. Pamiętaj, że interfejs Tanarea SDK w przeciwieństwie do standardowego interfejsu C++ nie pozwala na jednoczesny zapis i odczyt z/do pliku.<br />
-			Musisz być zdecydowany co chcesz z plikiem robić!<br /><br />
+			Zmiana flagi <span class="strong_word">READ</span> na <span class="strong_word">WRITE</span> sprawiła, że teraz plik jest otwarty w trybie do zapisu. Dodatkowo zdefiniowaliśmy również flagę <span class="strong_word">ALLOW_TRUNCATE</span>, która powoduje wyczyszczenie obecnej zawartości pliku.<br />
+			Pamiętaj, że interfejs Tanarea SDK w przeciwieństwie do standardowego interfejsu C++ nie pozwala na jednoczesny zapis i odczyt z/do pliku. Musisz być zdecydowany co chcesz z plikiem robić!<br /><br />
 			Samo zapisywanie to banał – wystarczy wywołać metodę <span class="strong_word">Write</span>, która jako argument przyjmuje tekst do zapisu. To tyle jeśli chodzi o obsługę plików tekstowych.<br />
 			Przejdźmy więc do plików binarnych.<br /><br />
 			Tutaj sytuacja wygląda zgoła inaczej. Zacznijmy od odczytu:
@@ -231,7 +232,7 @@
 					<span style="margin-left: 90px;"><span class="type">tnr::f16</span> HalfsArray[3];</span><br />
 					<span style="margin-left: 60px;">};</span><br />
 
-					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">„file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">READ</span>);<br />
+					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">"file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">READ</span>);<br />
 					<span style="margin-left: 60px;"><span class="type">MyData</span> Data = File.<span class="function">ReadBinary</span>&lt;<span class="type">MyData</span>&gt;();</span><br />
 					
 					<span style="margin-left: 30px;">}</span><br />
@@ -244,7 +245,7 @@
 					<span style="margin-left: 90px;"><span class="type">tnr::f16</span> HalfsArray[3];</span><br />
 					<span style="margin-left: 60px;">};</span><br />
 
-					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">„file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">READ</span>);<br />
+					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">"file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">READ</span>);<br />
 					<span style="margin-left: 60px;"><span class="type">std::vector</span>&lt;<span class="type">char</span>&gt; Data = File.<span class="function">ReadBinary</span>(<span class="keyword"><b>sizeof</b></span>(<span class="type">MyData</span>));<br />
 					<span style="margin-left: 60px;"><span class="type">MyData</span> FinalData = *<span class="keyword"><b>reinterpret_cast</b></span>&lt;<span class="type">MyData</span>*&gt;(Data.<span class="function">data</span>());</span><br />
 					
@@ -255,14 +256,14 @@
 			</div>
 
 			W każdym segmencie początek jest ten sam – tworzymy obiekt (tym razem klasy <span class="strong_word">tnrFileBinary</span>), podajemy ścieżkę do pliku oraz flagi trybu otwarcia. Inne są jednak sposoby odczytu. <br /><br />
-			Pierwszy segment reprezentuje „odczyt typowany”. To znaczy – metoda <span class="strong_word">ReadBinary&lt;T&gt;</span> celowo ma przeciążenie, które jest szablonem.<br />
+			Pierwszy blok reprezentuje „odczyt typowany”. To znaczy – metoda <span class="strong_word">ReadBinary&lt;T&gt;</span> celowo ma przeciążenie w postaci szablonu.<br />
 			Pozwala to na odczytanie danych z pliku binarnego podając sam typ danych do odczytania. Przeciążenie to odczytuje <span class="strong_word">n</span> bajtów gdzie <span class="strong_word">n = sizeof(T)</span> <br />
 			oraz automatycznie je konwertuje do pożądanego typu danych i zwraca w tym typie danych.<br /><br />
 			
 			Drugi segment pokazuje konwencjonalne odczytywanie bajtów z pliku binarnego. Skorzystałem tu z innego przeciążenia <span class="strong_word">ReadBinary</span>,<br />
-			gdzie metoda przyjmuje tylko ilość bajtów do odczytu i zwraca wspomniane bajty w postaci tablicy dynamicznej bajtów – <span class="strong_word">std::vector</span><char>.<br />
+			gdzie metoda przyjmuje tylko ilość bajtów do odczytu i zwraca wspomniane bajty w postaci obiektu typu <span class="strong_word">std::vector</span>, który składa się z dynamicznie alokowanej tablicy.<br />
 			Następnie za pomocą <span class="strong_word">reinterpret_cast</span> przekopiowałem dane z tablicy bajtów do zmiennej <span class="strong_word">FinalData</span> o docelowym typie.<br /><br />
-			Podobnie sytuacja wygląda przy zapisie do pliku binarnego:
+			Sytuacja wygląda podobnie przy zapisie do pliku binarnego:
 			<div class="code_block">
 				#include <span class="string">&lt;iostream&gt;</span><br />
 				#include <span class="string">&lt;TanareaSDK.hpp&gt;</span><br /><br />
@@ -276,9 +277,9 @@
 					<span style="margin-left: 90px;"><span class="type">tnr::f16</span> HalfsArray[3];</span><br />
 					<span style="margin-left: 60px;">} Data;</span><br />
 
-					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">„file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">WRITE</span>);<br />
+					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">"file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">WRITE</span>);<br />
 					<span style="margin-left: 60px;">File.<span class="function">WriteBinary</span>(Data); </span><br />
-
+				    <span style="margin-left: 30px;">}<br /></span>
 
 					<span style="margin-left: 30px;"><span class="comment">// SECOND SEGMENT</span><br /></span>
 					<span style="margin-left: 30px;">{</span><br />
@@ -290,7 +291,7 @@
 					<span style="margin-left: 60px;"><span class="type">std::vector</span>&lt;<span class="type">char</span>&gt; InputBuffer(<span class="keyword"><b>sizeof</b></span>(Data));</span><br />
 					<span style="margin-left: 60px;">std::<span class="function">memcpy</span>(InputBuffer.<span class="function">data</span>(), &Data, <span class="keyword"><b>sizeof</b></span>(Data));</span><br /><br />
 
-					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">„file.bin”</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">WRITE</span>);<br />
+					<span style="margin-left: 60px;"><span class="type">tnr::file::tnrFileBinary</span> File(<span class="string">"file.bin"</span>, <span class="type">tnr::file::tnrFileOpenMode::</span><span class="keyword">WRITE</span>);<br />
 					<span style="margin-left: 60px;">File.<span class="function">WriteBinary</span>(InputBuffer); </span><br />
 					
 					
@@ -304,11 +305,11 @@
 
 			Znów – początek każdego segmentu jest już znajomy, zmieniła się tylko flaga na <span class="strong_word">WRITE</span>.<br /><br />
 
-			W pierwszym segmencie widać zapis bezpośrednio z danego pola prosto do pliku. Podobnie jak przy <span class="strong_word">ReadBinary</span>, <span class="strong_word">WriteBinary</span> ma przeciążenie jako szablon,<br />
-			pozwala to przez dedukcję typu podawanego parametru bezproblemowo zapisywać dane bez podawania niczego więcej oprócz samych danych!<br /><br />
+			W pierwszym widać zapis bezpośrednio z danego pola prosto do pliku. Podobnie jak przy <span class="strong_word">ReadBinary</span>, <span class="strong_word">WriteBinary</span> ma przeciążenie w postaci szablonu,<br />
+			co pozwala na dedukcję typu podawanego parametru i bezproblemowo zapisywać dane bez podawania niczego więcej oprócz samych danych!<br /><br />
 
-			Drugi segment pokazuje zapis danych jako zwykłej tablicy bajtów. Na początku stworzyłem <span class="strong_word">InputBuffer</span> by do niego przekopiować dane,<br />
-			by móc je później podać za pomocą przyjmowanego w argumencie <span class="strong_word">WriteBinary std::span&lt;char&gt;</span>. To przeciążenie metody <span class="strong_word">WriteBinary</span> zapisuje całą zawartość przekazaną za pomocą <span class="strong_word">std::span</span>.<br /><br />
+			Drugi segment pokazuje zapis danych jako zwykłej tablicy bajtów. Na początku stworzyliśmy <span class="strong_word">InputBuffer</span> by do niego przekopiować dane,<br />
+			w celu późniejszego skopiowania ich za pomocą przyjmowanego w argumencie <span class="strong_word">WriteBinary std::span&lt;char&gt;</span>. To przeciążenie metody <span class="strong_word">WriteBinary</span> zapisuje całą zawartość przekazaną za pomocą <span class="strong_word">std::span</span>.<br /><br />
 
 			Jeśli dotarłeś do końca tego tutorialu, myślę że masz już pojęcie jak przetwarzać pliki za pomocą Tanarea SDK. Nie zapomnij zajrzeć po szczegóły do dokumentacji Tanarea SDK!
 		</div>

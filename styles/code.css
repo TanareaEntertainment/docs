@@ -2,7 +2,7 @@
 
 .type
 {
-	color: #3ca829;
+	color: #8f5bff;
 }
 
 .keyword
@@ -17,13 +17,16 @@
 
 .code_block
 {
-	background-color: #202020; 
+	background-color: #0c0c0c; 
 	padding: 30px;
 	margin-top: 20px; 
 	margin-bottom: 20px;
 	width:max-content; 
 	font-family: monospace;
 	color: #a9e0ff;
+	border-color: rgb(116, 116, 116);
+	border-style: solid;
+	border-width: 2px;
 }
 
 .string
